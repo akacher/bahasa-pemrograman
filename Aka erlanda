@@ -1,0 +1,187 @@
+# bahasa-pemrograman
+Bertahap tapi pasti
+umur=33
+
+if umur>=18:
+
+  print("Kamu  berhak memiliki SIM")
+
+else:
+
+  print("Kamu belum berhak memiliki SIM")
+
+Kamu  berhak memiliki SIM
+
+In [4]:
+
+hasil="Kamu berhak memiliki SIM" if umur>=18 else "Kamu belum berhak memiliki SIM"
+
+print(hasil)
+
+Kamu berhak memiliki SIM
+
+In [7]:
+
+bilangan=0
+
+cek_bilangan="Positif" if bilangan>0 else "Negatif"
+
+print(cek_bilangan)
+
+Negatif
+
+In [12]:
+
+bilangan=0
+
+if bilangan>0:
+
+  hasil="Positif"
+
+elif bilangan<0:
+
+  hasil="Negatif"
+
+else:
+
+  hasil="Netral" 
+
+print(f"{bilangan} adalah bilangan {hasil}")
+
+0 adalah bilangan Netral
+
+In [13]:
+
+print(4/0)
+
+---------------------------------------------------------------------------
+
+ZeroDivisionError                         Traceback (most recent call last)
+
+<ipython-input-13-4bf1a7e4a751> in <module>()
+
+----> 1 print(4/0)
+
+ZeroDivisionError: division by zero
+
+In [16]:
+
+import math
+
+print(math.sqrt(-9))
+
+---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+<ipython-input-16-94844651de13> in <module>()
+
+      1 import math
+
+      2 
+
+----> 3 print(math.sqrt(-9))
+
+ValueError: math domain error
+
+In [26]:
+
+#Input data
+
+a=int(input("Masukan nilai a ?"))
+
+b=int(input("Masukan nilai b ?"))
+
+c=int(input("Masukan nilai c ?"))
+
+#Proses menghitung determinan dengan rumus b^2-4ac
+
+d=b**2-(4*a*c)
+
+#Proses menyeleksi nilai determinan
+
+if d>0:
+
+  jenis_akar="X1 dan X2 adalah akar real berbeda"
+
+elif d==0:
+
+  jenis_akar="X1 dan X2 adalah akar kembar(sama)"
+
+else:
+
+  jenis_akar="X1 dan X2 adalah akar imajiner"
+
+#Prose menghitung nilai x1 dan x2
+
+if d>=0:
+
+  x1=(-b+math.sqrt(d))/(2*a)
+
+  x2=(-b-math.sqrt(d))/(2*a)
+
+else:
+
+  x1=x2="Imajiner"
+
+  
+
+print(f"{jenis_akar} untuk nilai determinan adalah {d}")
+
+print(f"X1={x1}, X2={x2}")
+
+Masukan nilai a ?4
+
+Masukan nilai b ?45
+
+Masukan nilai c ?120
+
+X1 dan X2 adalah akar real berbeda untuk nilai determinan adalah 105
+
+X1=-4.3441311542550505, X2=-6.9058688457449495
+
+In [27]:
+
+#Input nilai absen, tugas , uts dan uas
+
+absen=int(input("Masukkan nilai absensi ?"))
+
+tugas=int(input("Masukkan nilai tugas ?"))
+
+uts=int(input("Masukkan nilai uts ?"))
+
+uas=int(input("Masukkan nilai uas ?"))
+
+NA=(absen*0.4)+(tugas*0.1)+(uts*0.2)+(uas*0.3)
+
+if NA>=85 :
+
+  nh="A"
+
+elif NA>=75:
+
+  nh="B"
+
+elif NA>=50:
+
+  nh="C"
+
+elif NA>=40:
+
+  nh="D"
+
+else:
+
+  nh="E"
+
+print(f"Nilai angka adalah {NA} dan nilai hurup adalah {nh}")
+
+Masukkan nilai absensi ?60
+
+Masukkan nilai tugas ?100
+
+Masukkan nilai uts ?80
+
+Masukkan nilai uas ?50
+
+Nilai angka adalah 65.0 dan nilai hurup adalah C
